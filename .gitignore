@@ -4,4 +4,4 @@ coverage
 dist
 .vscode
 ormconfig.json
-temp
+tmp
