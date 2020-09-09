@@ -7,9 +7,11 @@ import IFindAllProvidersDTO from '@modules/appointments/dtos/IFindAllProvidersDT
 
 class UsersRepository implements IUsersRepository {
   private ormRepository: Repository<User>;
+
   constructor() {
     this.ormRepository = getRepository(User);
   }
+
   public async findByEmail(email: string): Promise<User | undefined> {
     const user = await this.ormRepository.findOne({
       where: { email },
